@@ -5,7 +5,15 @@ VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsControlLibrary1", "WinFormsControlLibrary1\WinFormsControlLibrary1.csproj", "{B034039F-64BC-4B75-A9C4-2325FFD3BDB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsComponentOprientedApp", "WinFormsApp1\WinFormsComponentOprientedApp.csproj", "{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentContract", "ComponentContract\ComponentContract.csproj", "{2CCE294D-F917-42DE-9140-5A257085A4AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportComponent", "ReportComponent\ReportComponent.csproj", "{97668C2B-8EBE-4E8F-9F05-79A3FF40C472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleListComponent", "SimpleListComponent\SimpleListComponent.csproj", "{4A1E5496-EB05-4BD7-B3D5-CF3B6AE417FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeListComponent", "TreeListComponent\TreeListComponent.csproj", "{98B2EC69-F979-4F15-8F61-88EC3344FC33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCE294D-F917-42DE-9140-5A257085A4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCE294D-F917-42DE-9140-5A257085A4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCE294D-F917-42DE-9140-5A257085A4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCE294D-F917-42DE-9140-5A257085A4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97668C2B-8EBE-4E8F-9F05-79A3FF40C472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97668C2B-8EBE-4E8F-9F05-79A3FF40C472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97668C2B-8EBE-4E8F-9F05-79A3FF40C472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97668C2B-8EBE-4E8F-9F05-79A3FF40C472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1E5496-EB05-4BD7-B3D5-CF3B6AE417FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1E5496-EB05-4BD7-B3D5-CF3B6AE417FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1E5496-EB05-4BD7-B3D5-CF3B6AE417FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1E5496-EB05-4BD7-B3D5-CF3B6AE417FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B2EC69-F979-4F15-8F61-88EC3344FC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B2EC69-F979-4F15-8F61-88EC3344FC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B2EC69-F979-4F15-8F61-88EC3344FC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B2EC69-F979-4F15-8F61-88EC3344FC33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
