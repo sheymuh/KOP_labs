@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsControlLibrary1", "WinFormsControlLibrary1\WinFormsControlLibrary1.csproj", "{B034039F-64BC-4B75-A9C4-2325FFD3BDB1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsComponentOprientedApp", "WinFormsApp1\WinFormsComponentOprientedApp.csproj", "{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentOprientedApp", "WinFormsApp1\ComponentOprientedApp.csproj", "{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentContract", "ComponentContract\ComponentContract.csproj", "{2CCE294D-F917-42DE-9140-5A257085A4AB}"
 EndProject
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B034039F-64BC-4B75-A9C4-2325FFD3BDB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B034039F-64BC-4B75-A9C4-2325FFD3BDB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B034039F-64BC-4B75-A9C4-2325FFD3BDB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B034039F-64BC-4B75-A9C4-2325FFD3BDB1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C1E3ED8-D736-4EBE-9449-D6AEB34991EC}.Release|Any CPU.ActiveCfg = Release|Any CPU

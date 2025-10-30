@@ -1,10 +1,7 @@
 ﻿namespace ComponentContract;
 
-internal interface IComponentContract
+public interface IComponentContract
 {
-    string Id { get; }
-
-    string Name { get; }
-
-    UserControl Control { get; }
+    IComponentMetadata Metadata { get; }
+    UserControl CreateControl(IHostServices host);
 }

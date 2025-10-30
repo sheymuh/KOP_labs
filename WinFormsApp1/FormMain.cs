@@ -1,84 +1,54 @@
-﻿namespace WinFormsComponentOprientedApp;
+﻿using ComponentContract;
+
+namespace ComponentOprientedApp;
 
 public partial class FormMain : Form
 {
-    public FormMain()
+    private readonly Dictionary<string, IComponentContract> _directories;
+    private readonly Dictionary<string, UserControl> _controls = new();
+    private readonly IHostServices _host;
+    private Panel _activePanel;
+
+    public FormMain(Dictionary<string, IComponentContract> components, IHostServices host)
     {
+        _directories = components;
+        _host = host;
         InitializeComponent();
+        _activePanel = new Panel { Dock = DockStyle.Fill };
+        Controls.Add(_activePanel);
         try
         {
-            var extensions = LoadExtensions();
-            foreach (var extension in //выборка контролов для пункта меню «Справочники»)
-{
-                var menu = new ToolStripMenuItem
-                {
-                    Text = //заголовок подпункта меню
-                };
-                menu.Click += (sender, e) =>
-                {
-                    OpenControl(//передаем что потребуется);
-};
-                DirectoriesToolStripMenuItem.DropDownItems.Add(menu);
-            }
-            foreach (var extension in //выборка контролов для пункта меню «Отчеты»)
-{
-                _controls.Add(extension.Id, extension.Control);
-                var menu = new ToolStripMenuItem
-                {
-                    Text = //заголовок подпункта меню
-                };
-                menu.Click += (sender, e) =>
-                {
-                    OpenControl(//передаем что потребуется);
-};
-                ReportsToolStripMenuItem.DropDownItems.Add(menu);
-            }
+            PopulateMenu(directoriesToolStripMenuItem.DropDownItems, ComponentType.List);
+            PopulateMenu(reportsToolStripMenuItem.DropDownItems, ComponentType.Report);
         }
         catch (Exception ex)
         {
-            MessageBox.Show(ex.Message, "Ошибка при загрузке компонент",
-            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(ex.Message, "Ошибка при загрузке компонент", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
-    /// <summary>
-    /// Добавление нового контрола
-    /// </summary>
-    private void OpenControl(//передаем что потребуется)
-{
-        //проверка, что такой контрол еще не был добавлен в TabControl
-        //получение UserControl
-        var tabPage = new TabPage
-        {
-            Location = new Point(4, 24),
-            Name = $"tabPage{title}",
-            Padding = new Padding(3),
-            Size = new Size(792, 398),
-            TabIndex = 0,
-            Text = title,
-            UseVisualStyleBackColor = true
-        };
-        tabPage.Controls.Add(UserControl);
-        tabControls.TabPages.Add(tabPage);
-    }
-    /// <summary>
-    /// Загрузка реализаций контрактов
-    /// </summary>
-    private static List<IComponentContract> LoadExtensions()
+    private void PopulateMenu(ToolStripItemCollection menuItems, ComponentType type)
     {
-        //получение списка реализаций контрактов
-        return list;
+        var components = _directories.Values.Where(c => c.Metadata.ComponentType == type);
+        foreach (var component in components)
+        {
+            var menuItem = new ToolStripMenuItem { Text = component.Metadata.Title };
+            menuItem.Click += (sender, e) => ShowComponent(component.Metadata.Title, type == ComponentType.List
+                ? component.CreateControl(_host)
+                : _controls.GetValueOrDefault(component.Metadata.Id) ?? component.CreateControl(_host));
+            if (type == ComponentType.Report)
+            {
+                _controls.TryAdd(component.Metadata.Id, component.CreateControl(_host));
+            }
+            menuItems.Add(menuItem);
+        }
     }
 
-    /// <summary>
-    /// Закрытие вкладки
-    /// </summary>
-    private void TabControls_DoubleClick(object sender, EventArgs e)
+    private void ShowComponent(string title, UserControl control)
     {
-        if (tabControls.SelectedTab is null)
-        {
-            return;
-        }
-        tabControls.TabPages.Remove(tabControls.SelectedTab);
+        panel1.Controls.Clear();
+        control.Dock = DockStyle.Fill;
+        panel1.Controls.Add(control);
+        Text = $"Учет подразделений - {title}";
     }
 }
