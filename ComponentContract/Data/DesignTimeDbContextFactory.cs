@@ -14,8 +14,8 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CompanyDbC
             .Build();
 
         var optionsBuilder = new DbContextOptionsBuilder<CompanyDbContext>();
-        var connectionString = configuration.GetConnectionString("OrganisationDb")
-            ?? "Host=localhost;Port=5432;Database=organisation_db;Username=postgres;Password=admin123";
+        var connectionString = configuration.GetConnectionString("CompanyDb")
+            ?? "Host=localhost;Port=5432;Database=company_db;Username=postgres;Password=postgres";
 
         optionsBuilder.UseNpgsql(connectionString);
         return new CompanyDbContext(optionsBuilder.Options);

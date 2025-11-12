@@ -17,12 +17,43 @@ namespace SimpleListComponent
             InitializeComponent();
             _host = host;
             _dbContext = host.DbContext;
-
+            // Проверяем подключение при создании контрола
+            // _ = CheckTableExists();
             Load += async (_, __) => await LoadDataAsync();
             dataGridViewCustom.DataSource = _bindingSource;
 
             dataGridViewCustom.KeyDown += DataGridViewCustom_OnKeyDown;
             dataGridViewCustom.CellEndEdit += DataGridView_CellEndEdit;
+        }
+
+        private async Task CheckTableExists()
+        {
+            // Создаем новый экземпляр DbContext для проверки
+            var optionsBuilder = new DbContextOptionsBuilder<CompanyDbContext>();
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=company_db;Username=postgres;Password=postgres");
+
+            using var checkContext = new CompanyDbContext(optionsBuilder.Options);
+
+            try
+            {
+                var canConnect = await checkContext.Database.CanConnectAsync();
+
+                if (canConnect)
+                {
+                    var postsExist = await checkContext.EmployeePosts.IgnoreQueryFilters().AnyAsync();
+                    var employeesExist = await checkContext.Employees.IgnoreQueryFilters().AnyAsync();
+
+                    MessageBox.Show($"База данных подключена\nТаблица должностей: {postsExist}\nТаблица сотрудников: {employeesExist}");
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось подключиться к базе данных");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+            }
         }
 
         private async void DataGridViewCustom_OnKeyDown(object? sender, KeyEventArgs e)

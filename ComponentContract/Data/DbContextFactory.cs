@@ -18,8 +18,8 @@ public static class DbContextFactory
             throw new InvalidOperationException("DbContextFactory not initialized. Call Initialize() first.");
 
         var optionsBuilder = new DbContextOptionsBuilder<CompanyDbContext>();
-        var connectionString = _configuration.GetConnectionString("OrganisationDb")
-            ?? throw new InvalidOperationException("Connection string 'OrganisationDb' not found.");
+        var connectionString = _configuration.GetConnectionString("CompanyDb")
+            ?? throw new InvalidOperationException("Connection string 'CompanyDb' not found.");
 
         optionsBuilder.UseNpgsql(connectionString);
         return new CompanyDbContext(optionsBuilder.Options);

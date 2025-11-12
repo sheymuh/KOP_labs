@@ -49,6 +49,6 @@ public partial class FormMain : Form
         panel1.Controls.Clear();
         control.Dock = DockStyle.Fill;
         panel1.Controls.Add(control);
-        Text = $"Учет подразделений - {title}";
+        Text = $"Учет сотрудников - {title}";
     }
 }

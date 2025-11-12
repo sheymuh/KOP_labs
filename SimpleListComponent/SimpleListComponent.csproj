@@ -6,10 +6,11 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ComponentContract" Version="1.0.2" />
+    <PackageReference Include="ComponentContract" Version="1.0.6" />
   </ItemGroup>
 
 </Project>

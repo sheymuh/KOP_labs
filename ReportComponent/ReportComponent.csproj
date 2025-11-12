@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ComponentContract" Version="1.0.2" />
+    <PackageReference Include="ComponentContract" Version="1.0.6" />
   </ItemGroup>
 
 </Project>
