@@ -6,8 +6,8 @@ public class CompanyReportComponent : IComponentContract
 {
     private static readonly IComponentMetadata _metadata =
         new ComponentMetadata(
-            id: "SubdivisionReport",
-            title: "Отчет по подразделениям",
+            id: "ReportComponent",
+            title: "Отчет по сотрудникам",
             componentType: ComponentType.Report,
             requiredAccess: AccessLevel.Advanced);
 

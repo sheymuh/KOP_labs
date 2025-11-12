@@ -6,8 +6,8 @@ internal class CompanyTreeListComponent : IComponentContract
 {
     private static readonly IComponentMetadata _metadata =
         new ComponentMetadata(
-            id: "SubdivisionDirectory",
-            title: "Подразделения",
+            id: "TreeListComponent",
+            title: "Сотрудники",
             componentType: ComponentType.List,
             requiredAccess: AccessLevel.Basic);
 

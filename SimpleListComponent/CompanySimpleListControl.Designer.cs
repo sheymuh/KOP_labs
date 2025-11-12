@@ -28,10 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            dataGridViewCustom = new DataGridView();
+            NameColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCustom).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridViewCustom
+            // 
+            dataGridViewCustom.AllowUserToAddRows = false;
+            dataGridViewCustom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCustom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCustom.Columns.AddRange(new DataGridViewColumn[] { NameColumn });
+            dataGridViewCustom.Dock = DockStyle.Fill;
+            dataGridViewCustom.Location = new Point(0, 0);
+            dataGridViewCustom.Name = "dataGridViewCustom";
+            dataGridViewCustom.RowHeadersWidth = 72;
+            dataGridViewCustom.Size = new Size(1044, 542);
+            dataGridViewCustom.TabIndex = 0;
+            // 
+            // NameColumn
+            // 
+            NameColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            NameColumn.DataPropertyName = "Name";
+            NameColumn.HeaderText = "Должность работника";
+            NameColumn.MinimumWidth = 9;
+            NameColumn.Name = "NameColumn";
+            // 
+            // CompanySimpleListControl
+            // 
+            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridViewCustom);
+            Name = "CompanySimpleListControl";
+            Size = new Size(1044, 542);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCustom).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridViewCustom;
+        private DataGridViewTextBoxColumn NameColumn;
     }
 }
