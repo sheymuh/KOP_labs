@@ -57,18 +57,10 @@ public class CompanyDbContext : DbContext
                   .HasColumnType("timestamp without time zone")
                   .HasColumnName("promotion_date");
 
-            entity.Property(e => e.ParentId);
-
             // Связь с должностью работника
             entity.HasOne(e => e.EmployeePost)
                   .WithMany()
                   .HasForeignKey(e => e.EmployeePostId)
-                  .OnDelete(DeleteBehavior.Restrict);
-
-            // Иерархия работников
-            entity.HasOne(e => e.Parent)
-                  .WithMany(e => e.Children)
-                  .HasForeignKey(e => e.ParentId)
                   .OnDelete(DeleteBehavior.Restrict);
         });
 

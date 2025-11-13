@@ -71,7 +71,6 @@ namespace TreeListComponent
         {
             var list = await _dbContext.Employees
                 .Include(s => s.EmployeePost)
-                .Include(s => s.Parent)
                 .OrderBy(s => s.EmployeePost.Name)
                 .ThenBy(s => s.PromotionDate)
                 .ThenBy(s => s.FIO)

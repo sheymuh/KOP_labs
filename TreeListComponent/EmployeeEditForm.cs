@@ -91,7 +91,7 @@ namespace TreeListComponent
                     }
                     else
                     {
-                        MessageBox.Show("Нужно выбрать тип", "Валидация",
+                        MessageBox.Show("Нужно выбрать должность", "Валидация",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         e.Cancel = true;
                         return;

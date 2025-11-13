@@ -6,12 +6,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>	  
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ComponentContract" Version="1.0.6" />
+    <PackageReference Include="ComponentContract" Version="1.0.8" />
     <PackageReference Include="ControlsLibraryNet90" Version="1.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.10" />

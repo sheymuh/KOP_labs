@@ -11,15 +11,10 @@ public sealed class Employee
 
     public string? Autobiography { get; set; }
 
-    // Связь с типом подразделения
+    // Связь с должностью работника
     public Guid EmployeePostId { get; set; }
     public EmployeePost EmployeePost { get; set; } = null!;
 
     // Дата повышения квалификации (мог не проходить)
     public DateTime? PromotionDate { get; set; }
-
-    // Для иерархии работников
-    public Guid? ParentId { get; set; }
-    public Employee? Parent { get; set; }
-    public ICollection<Employee> Children { get; set; } = [];
 }

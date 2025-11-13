@@ -76,7 +76,7 @@ namespace ReportComponent
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при загрузке типов: {ex.Message}", "Ошибка",
+                MessageBox.Show($"Ошибка при загрузке должностей: {ex.Message}", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -85,7 +85,7 @@ namespace ReportComponent
         {
             if (_postComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Выберите тип подразделения", "Предупреждение",
+                MessageBox.Show("Выберите должность работника", "Предупреждение",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -102,16 +102,16 @@ namespace ReportComponent
 
                 _dataGridView.DataSource = employees.Select(e => new
                 {
-                    Наименование = e.FIO,
-                    Цель = e.Autobiography ?? "",
-                    Тип = e.EmployeePost.Name,
-                    ДатаОтчета = e.PromotionDate?.ToString("yyyy-MM-dd") ?? "",
+                    ФИО = e.FIO,
+                    Автобиография = e.Autobiography ?? "",
+                    Должность = e.EmployeePost.Name,
+                    ДатаПовышенияКвалификации = e.PromotionDate?.ToString("yyyy-MM-dd") ?? "",
                     Идентификатор = e.Id.ToString()
                 }).ToList();
 
                 _exportButton.Enabled = employees.Any();
 
-                MessageBox.Show($"Найдено подразделений: {employees.Count}", "Отчет сформирован",
+                MessageBox.Show($"Найдено работников: {employees.Count}", "Отчет сформирован",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -134,7 +134,7 @@ namespace ReportComponent
             {
                 Filter = "CSV файлы (*.csv)|*.csv|Все файлы (*.*)|*.*",
                 DefaultExt = "csv",
-                FileName = $"Отчет_подразделений_{DateTime.Now:yyyy-MM-dd}.csv"
+                FileName = $"Отчет_работников_{DateTime.Now:yyyy-MM-dd}.csv"
             };
 
             if (saveDialog.ShowDialog() == DialogResult.OK)

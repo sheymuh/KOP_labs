@@ -163,7 +163,7 @@
             MinimizeBox = false;
             Name = "EmployeeEditForm";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Подразделение";
+            Text = "Работник";
             ResumeLayout(false);
             PerformLayout();
         }
