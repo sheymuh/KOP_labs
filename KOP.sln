@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeListComponent", "TreeLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginLargeTextPdf", "PluginLargeTextPdf\PluginLargeTextPdf.csproj", "{592A9700-D325-43E1-8C5B-E559D93BD13E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{6AD6DD40-34D2-4139-B475-CC107B8E6859}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{592A9700-D325-43E1-8C5B-E559D93BD13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{592A9700-D325-43E1-8C5B-E559D93BD13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{592A9700-D325-43E1-8C5B-E559D93BD13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD6DD40-34D2-4139-B475-CC107B8E6859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD6DD40-34D2-4139-B475-CC107B8E6859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD6DD40-34D2-4139-B475-CC107B8E6859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD6DD40-34D2-4139-B475-CC107B8E6859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
