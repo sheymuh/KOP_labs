@@ -32,6 +32,7 @@
             directoriesToolStripMenuItem = new ToolStripMenuItem();
             reportsToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            extensionsToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             // 
             // reportsToolStripMenuItem
             // 
+            reportsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { extensionsToolStripMenuItem });
             reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             reportsToolStripMenuItem.Size = new Size(60, 20);
             reportsToolStripMenuItem.Text = "Отчеты";
@@ -64,7 +66,13 @@
             panel1.Size = new Size(800, 426);
             panel1.TabIndex = 1;
             // 
-            // EmployeeForm
+            // extensionsToolStripMenuItem
+            // 
+            extensionsToolStripMenuItem.Name = "extensionsToolStripMenuItem";
+            extensionsToolStripMenuItem.Size = new Size(180, 22);
+            extensionsToolStripMenuItem.Text = "Расширения";
+            // 
+            // SubdivisionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -72,8 +80,8 @@
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "EmployeeForm";
-            Text = "Учет сотрудников";
+            Name = "SubdivisionForm";
+            Text = "Учет подразделений";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -86,5 +94,6 @@
         private ToolStripMenuItem directoriesToolStripMenuItem;
         private ToolStripMenuItem reportsToolStripMenuItem;
         private Panel panel1;
+        private ToolStripMenuItem extensionsToolStripMenuItem;
     }
 }

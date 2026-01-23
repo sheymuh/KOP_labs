@@ -1,0 +1,267 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ReportDocumentWithChartPieWord/1.0.0": {
+        "dependencies": {
+          "PluginContractsImpl": "1.0.0"
+        },
+        "runtime": {
+          "ReportDocumentWithChartPieWord.dll": {}
+        }
+      },
+      "DocumentFormat.OpenXml/3.3.0": {
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.3.0"
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml.Framework/3.3.0": {
+        "dependencies": {
+          "System.IO.Packaging": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/9.0.9": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.925.41916"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.925.41916"
+          }
+        }
+      },
+      "PdfSharp.MigraDoc.Standard/1.51.15": {
+        "dependencies": {
+          "PDFSharp.Standard": "1.51.15",
+          "PDFSharp.Standard.Charting": "1.51.15",
+          "PdfSharp.MigraDoc.Standard.DocumentObjectModel": "1.51.15",
+          "System.Drawing.Common": "9.0.9",
+          "System.Resources.Extensions": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MigraDoc.Rendering.dll": {
+            "assemblyVersion": "1.51.5186.0",
+            "fileVersion": "1.51.15.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/de/MigraDoc.Rendering.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "PdfSharp.MigraDoc.Standard.DocumentObjectModel/1.51.15": {
+        "dependencies": {
+          "System.Drawing.Common": "9.0.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MigraDoc.DocumentObjectModel.dll": {
+            "assemblyVersion": "1.51.5186.0",
+            "fileVersion": "1.51.15.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/de/MigraDoc.DocumentObjectModel.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "PDFSharp.Standard/1.51.15": {
+        "dependencies": {
+          "System.Drawing.Common": "9.0.9",
+          "System.Resources.Extensions": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PdfSharp.dll": {
+            "assemblyVersion": "1.51.5185.0",
+            "fileVersion": "1.51.15.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/de/PdfSharp.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "PDFSharp.Standard.Charting/1.51.15": {
+        "dependencies": {
+          "PDFSharp.Standard": "1.51.15",
+          "System.Drawing.Common": "9.0.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PdfSharp.Charting.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.51.15.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/de/PdfSharp.Charting.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "System.Drawing.Common/9.0.9": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.9"
+        },
+        "runtime": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.925.41903"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.925.41903"
+          }
+        }
+      },
+      "System.IO.Packaging/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.IO.Packaging.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
+      "System.Resources.Extensions/4.6.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Resources.Extensions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        }
+      },
+      "PluginContractsImpl/1.0.0": {
+        "dependencies": {
+          "DocumentFormat.OpenXml": "3.3.0",
+          "PdfSharp.MigraDoc.Standard": "1.51.15",
+          "PluginsContracts": "1.0.0",
+          "System.Drawing.Common": "9.0.9"
+        },
+        "runtime": {
+          "PluginContractsImpl.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PluginsContracts/1.0.0": {
+        "runtime": {
+          "PluginsContracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ReportDocumentWithChartPieWord/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DocumentFormat.OpenXml/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JogRPJNiE6kKvbuCqVRX691pPWeGMqdQgjrUwRYkdpfkMmtElfqAgcRR73geYj7OtBeEpstldZXXzJw27LUI9w==",
+      "path": "documentformat.openxml/3.3.0",
+      "hashPath": "documentformat.openxml.3.3.0.nupkg.sha512"
+    },
+    "DocumentFormat.OpenXml.Framework/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R5CLzEoeyr7XDB7g3NTxRobcU19agaxVAhGZm+fZUShJGiU4bw8oUgnA2BNFepigJckfFMayOBMAbV3kDXNInA==",
+      "path": "documentformat.openxml.framework/3.3.0",
+      "hashPath": "documentformat.openxml.framework.3.3.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eJU9vZbN710Cc25p/jPecPEL+gFcnynAvznNRnEvMU7i7u0PSjFXlGO4SOlaIUvkykTlS2N++M9B/coxYT7aPw==",
+      "path": "microsoft.win32.systemevents/9.0.9",
+      "hashPath": "microsoft.win32.systemevents.9.0.9.nupkg.sha512"
+    },
+    "PdfSharp.MigraDoc.Standard/1.51.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aZXAJbz86+dP+OUI9FFHl1kEWiUuHubwetkBJjgh2TYOZVGcIjQukT+PMmfHEdxbusPJ98qZuvTf8IgL7/GiwA==",
+      "path": "pdfsharp.migradoc.standard/1.51.15",
+      "hashPath": "pdfsharp.migradoc.standard.1.51.15.nupkg.sha512"
+    },
+    "PdfSharp.MigraDoc.Standard.DocumentObjectModel/1.51.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gpxvahSKaSicOCfFwR78xyoDwLg4O4nbHXPBmAkZ6CIdUVnce8HolUBsVFyTlTTBob8EMtx5rX0gXhwk0M9DXw==",
+      "path": "pdfsharp.migradoc.standard.documentobjectmodel/1.51.15",
+      "hashPath": "pdfsharp.migradoc.standard.documentobjectmodel.1.51.15.nupkg.sha512"
+    },
+    "PDFSharp.Standard/1.51.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cv+d443GTEYA+iE7FIzMg+GYeNVG0INlXOHAC709rj7Lb6HL0xTqckasthaq8Bqttxq2e4Sny5mN/1z4dHvBOA==",
+      "path": "pdfsharp.standard/1.51.15",
+      "hashPath": "pdfsharp.standard.1.51.15.nupkg.sha512"
+    },
+    "PDFSharp.Standard.Charting/1.51.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/ek6/iH78XfuBoMM+Me+//yT30y2Hz2k4TVmasOFBiYja54ysVRt8nLQBCZ1Ft8EY3s+4Z3GgTkEJC4a32y4WQ==",
+      "path": "pdfsharp.standard.charting/1.51.15",
+      "hashPath": "pdfsharp.standard.charting.1.51.15.nupkg.sha512"
+    },
+    "System.Drawing.Common/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BS17VFUf4RS9G/JoA6br+79jAjyTj0UaomgXCVNJJn9EWIvmHkn0ZCqAynxwloO00yPIvWgXBF9SBjcM06bl1w==",
+      "path": "system.drawing.common/9.0.9",
+      "hashPath": "system.drawing.common.9.0.9.nupkg.sha512"
+    },
+    "System.IO.Packaging/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
+      "path": "system.io.packaging/8.0.1",
+      "hashPath": "system.io.packaging.8.0.1.nupkg.sha512"
+    },
+    "System.Resources.Extensions/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6aVCk8oTFZNT3Tx1jjiPi6+aipiJ3qMZYttAREKTRJidP50YvNeOn4PXrqzfA5qC23fLReq2JYp+nJwzj62HGw==",
+      "path": "system.resources.extensions/4.6.0",
+      "hashPath": "system.resources.extensions.4.6.0.nupkg.sha512"
+    },
+    "PluginContractsImpl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PluginsContracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

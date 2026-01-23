@@ -9,7 +9,10 @@ namespace ComponentOprientedApp
     internal static class Program
     {
         public static IConfiguration Configuration { get; private set; }
+
         public static AccessLevel CurrentAccessLevel { get; private set; } = AccessLevel.Minimal;
+
+        public static string? ExtensionPath { get; private set; }
 
         /// <summary>
         ///  The main entry point for the application.
@@ -26,7 +29,7 @@ namespace ComponentOprientedApp
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             Configuration = builder.Build();
 
-            var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", Configuration["PluginsPath"] ?? "Plugins"));
+            var path = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", Configuration["ComponentsPath"] ?? "Components"));
 
             var licensePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", Configuration["License"] ?? "License"));
             var licenseProvider = new LicenseProvider(licensePath);
@@ -34,6 +37,9 @@ namespace ComponentOprientedApp
             {
                 CurrentAccessLevel = licenseProvider.CurrentLevel;
             }
+
+            var extensionPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", Configuration["PluginsPath"] ?? "Plugins"));
+            if (extensionPath is not null) ExtensionPath = extensionPath;
 
             var loader = new ComponentLoader(path, CurrentAccessLevel);
             var components = loader.LoadAll().ToDictionary(c => c.Metadata.Title, c => c);

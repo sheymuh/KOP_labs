@@ -15,6 +15,11 @@ public partial class FormMain : Form
         _host = host;
         InitializeComponent();
         _activePanel = new Panel { Dock = DockStyle.Fill };
+        extensionsToolStripMenuItem.Click += (sender, e) =>
+        {
+            var form = new ExtensionsForm(host);
+            form.ShowDialog();
+        };
         Controls.Add(_activePanel);
         try
         {

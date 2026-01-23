@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ComponentContract" Version="1.0.8" />
+    <PackageReference Include="PDFsharp-MigraDoc-GDI" Version="6.2.3" />
+  </ItemGroup>
+
+    <ItemGroup>
+	    <Reference Include="PluginsContracts">
+		    <HintPath>..\finally_dll\PluginsContracts.dll</HintPath>
+	    </Reference>
+    </ItemGroup>
+</Project>
