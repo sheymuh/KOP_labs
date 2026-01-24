@@ -1,8 +1,11 @@
 ﻿namespace WebApi.Entities;
 
-public class EmployeePost(Guid id, string name)
+public class EmployeePost
 {
-    public Guid Id { get; set; } = id;
+    public Guid Id { get; set; } = Guid.NewGuid();
 
-    public string Name { get; set; } = name;
+    public required string Name { get; set; }
+
+    // Soft delete при удалении типа (упраздненный тип)
+    public bool IsDeprecated { get; set; } = false;
 }
