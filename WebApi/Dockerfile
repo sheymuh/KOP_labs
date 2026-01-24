@@ -1,9 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["WebApi.csproj", "."]
-RUN dotnet restore "WebApi.csproj"
+COPY ["WebApi/WebApi.csproj", "WebApi/"]
+RUN dotnet restore "WebApi/WebApi.csproj"
 COPY . .
+WORKDIR "/src/WebApi"
 RUN dotnet build "WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

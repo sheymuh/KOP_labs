@@ -4,8 +4,9 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "organisationwebapi": "StartDebugging",
-        "subdivision": "StartDebugging"
+        "db": "StartWithoutDebugging",
+        "webapi": "StartDebugging",
+        "employeeapi": "StartDebugging"
       }
     }
   }
