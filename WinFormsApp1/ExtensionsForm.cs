@@ -51,7 +51,7 @@ public partial class ExtensionsForm : Form
         if (comboBoxPdf.SelectedItem is not null && comboBoxPdf.SelectedItem is "pdf")
         {
             var pdfExtension = _extensions?.First(ex => ex.DocumentFormat == "pdf");
-            if (pdfExtension is ComponentContract.Reports.IReportDocumentWithContextTextsContract pdf)
+            if (pdfExtension is IReportDocumentWithContextTextsContract pdf)
             {
                 using var saveDialog = new SaveFileDialog
                 {
