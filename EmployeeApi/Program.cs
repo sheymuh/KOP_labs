@@ -58,4 +58,25 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Проверяем подключение к БД при запуске
+try
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+        // Применяем миграции автоматически
+        db.Database.Migrate();
+
+        var canConnect = await db.Database.CanConnectAsync();
+        Console.WriteLine($"Database connection: {(canConnect ? "OK" : "FAILED")}");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"WARNING: Cannot connect to database: {ex.Message}");
+    Console.WriteLine($"Exception details: {ex}");
+    Console.WriteLine("Application will continue, but database operations may fail.");
+}
+
 app.Run();
